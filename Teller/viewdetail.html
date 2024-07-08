@@ -83,9 +83,14 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .btn_modal_wale{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
         .modal-btn-img{
-             height: 40px;
-             width: 40px;
+             height: 20px;
+             width: 20px;
         }
     </style>
 </head>
@@ -211,6 +216,12 @@
             <span class="close" onclick="closeModal('modal1')">&times;</span>
             <form id="transferForm">
                 <p>Transfer Money</p>
+                <div class="btn_modal_wale">
+                <div class="modal-btn" onclick="navigateToBAnkTransfer()"><img src="images/bank.svg" alt="bank" class="modal-btn-img">Bank Transfer<p></p>
+                </div>
+                <div class="modal-btn" onclick="navigateToTransferGlobally()"><img src="images/transfer copy.png" alt="bank" class="modal-btn-img">Bank Globally<p></p>
+                </div>
+            </div>
                 <div class="enteramount">Recipient User ID</div>
                 <input id="recipientUserId" type="text" placeholder="Enter User ID">
                 <div class="enteramount">Enter Amount</div>
